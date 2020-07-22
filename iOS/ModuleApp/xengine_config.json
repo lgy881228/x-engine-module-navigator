@@ -1,0 +1,19 @@
+{
+  "appId": "com.zkty.xiaoqu",
+  "appSecret": "8b387ca3ebdd412e9c97ef81ed352ee7",
+  "offlineServerUrl": "https://3rd-public-file.oss-cn-beijing.aliyuncs.com"，
+  "moduels":[
+      {
+          "module_id":"com.zkty.ui",
+          "name":"ui",
+          "tag": "1.0.0",
+             "engine_version": "0.0.1",
+          "minimal_os_version":
+              {
+                    "ios": "11.1.0",
+                  "android_api": 20
+                }
+  
+        }
+  ]
+}

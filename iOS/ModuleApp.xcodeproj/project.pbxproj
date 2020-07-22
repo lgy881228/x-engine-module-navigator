@@ -18,6 +18,7 @@
 		00DFC6FB24C841FD006A53EE /* EntryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 00DFC6F924C841FD006A53EE /* EntryViewController.m */; };
 		00DFC6FC24C841FD006A53EE /* EntryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 00DFC6FA24C841FD006A53EE /* EntryViewController.xib */; };
 		00DFC6FE24C8429C006A53EE /* com.zkty.xiaoqu.network.0 in Resources */ = {isa = PBXBuildFile; fileRef = 00DFC6FD24C8429C006A53EE /* com.zkty.xiaoqu.network.0 */; };
+		00DFC70024C843A3006A53EE /* xengine_config.json in Resources */ = {isa = PBXBuildFile; fileRef = 00DFC6FF24C843A3006A53EE /* xengine_config.json */; };
 		580E6E71C8C564B873C3DD47 /* Pods_ModuleApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C1561FB371B0C73E973964C /* Pods_ModuleApp.framework */; };
 		BCB7DC93DE09A7350B02B379 /* Pods_ModuleAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CBD865CDA016FABC284E103 /* Pods_ModuleAppTests.framework */; };
 		C4937C0B0767A8D2A00FF458 /* Pods_ModuleApp_ModuleAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F2FD1DFB5FE08961793A0E3 /* Pods_ModuleApp_ModuleAppUITests.framework */; };
@@ -61,6 +62,7 @@
 		00DFC6F924C841FD006A53EE /* EntryViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EntryViewController.m; sourceTree = "<group>"; };
 		00DFC6FA24C841FD006A53EE /* EntryViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EntryViewController.xib; sourceTree = "<group>"; };
 		00DFC6FD24C8429C006A53EE /* com.zkty.xiaoqu.network.0 */ = {isa = PBXFileReference; lastKnownFileType = folder; path = com.zkty.xiaoqu.network.0; sourceTree = "<group>"; };
+		00DFC6FF24C843A3006A53EE /* xengine_config.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = xengine_config.json; sourceTree = "<group>"; };
 		1192C7DE17F5AB93E35B08A2 /* Pods-ModuleApp-ModuleAppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ModuleApp-ModuleAppUITests.debug.xcconfig"; path = "Target Support Files/Pods-ModuleApp-ModuleAppUITests/Pods-ModuleApp-ModuleAppUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		1F2FD1DFB5FE08961793A0E3 /* Pods_ModuleApp_ModuleAppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ModuleApp_ModuleAppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C1561FB371B0C73E973964C /* Pods_ModuleApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ModuleApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -143,6 +145,7 @@
 		00DFC6E224C84000006A53EE /* ModuleApp */ = {
 			isa = PBXGroup;
 			children = (
+				00DFC6FF24C843A3006A53EE /* xengine_config.json */,
 				00DFC6FD24C8429C006A53EE /* com.zkty.xiaoqu.network.0 */,
 				00DFC6E324C84000006A53EE /* AppDelegate.h */,
 				00DFC6EC24C84000006A53EE /* AppDelegate.m */,
@@ -295,6 +298,7 @@
 				00DFC6FC24C841FD006A53EE /* EntryViewController.xib in Resources */,
 				00DFC6F024C84000006A53EE /* Assets.xcassets in Resources */,
 				00DFC6F324C84000006A53EE /* LaunchScreen.storyboard in Resources */,
+				00DFC70024C843A3006A53EE /* xengine_config.json in Resources */,
 				00DFC6FE24C8429C006A53EE /* com.zkty.xiaoqu.network.0 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
