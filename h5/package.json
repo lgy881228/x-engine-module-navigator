@@ -1,5 +1,5 @@
 {
-  "name": "webpack_demo",
+  "name": "@zk4/moudle_demo",
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
@@ -23,5 +23,9 @@
 		"webpack-merge": "^4.1.4",
     "webpack-dev-server": "^3.11.0",
     "x-engine-bridge": "^1.0.0"
+  },
+  "dependencies": {
+    "@zk4/xengine": "^1.0.9"
   }
+
 }
