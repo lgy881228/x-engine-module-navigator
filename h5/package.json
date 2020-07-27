@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "webpack-dev-server --mode development --open --hot",
     "build": "webpack --mode production",
-    "build:with-prod-config": "webpack  --config webpack.prod.js"
+    "build:with-prod-config": "webpack  --config webpack.prod.js",
+    "patch":"npm version patch"
   },
   "repository": {
     "type": "git",
