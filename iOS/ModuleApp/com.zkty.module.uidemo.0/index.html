@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="pragma" content="no-cache">
+    <meta http-equiv="cache-control" content="no-cache">
+    <meta http-equiv="expires" content="0">
+    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+    <script src="./core/dsbridge.js"></script>
+    <!-- <script src="./api/network.js"></script> -->
+    <script src="./api/ui.js"></script>
+    <title>TEST</title>
+</head>
+
+<style>
+    ul {
+        list-style-type: none;
+        padding: 0;
+    }
+
+    li {
+        box-shadow: 4px 2px 10px #555;
+        margin: 10px;
+        border-radius: 4px;
+        background: #eee;
+        overflow: hidden;
+        text-align: center;
+    }
+
+    .container {
+        margin: 0;
+        padding: 0px 0 15px 0;
+    }
+
+    .btn,
+    .contant {
+        color: #000;
+        padding: 10px;
+        font-size: 20px;
+    }
+
+    .contant {
+        background: #f7f7f7;
+        height: 0;
+        padding: 0 10px;
+        overflow: hidden;
+        transition: all 0.2s linear;
+        -webkit-transition: all 0.2s linear;
+    }
+
+    .container p {
+        margin: 10px 0;
+        padding-bottom: 10px;
+        border-bottom: 1px solid #eee;
+    }
+</style>
+
+<body>
+    <ul>
+        <li>
+            <div class="btn" onclick="layout(0)">network</div>
+            <div class="contant">
+                <div class="container">
+                    <p onclick="clickGetData()">get</p>
+                </div>
+            </div>
+        </li>
+        <li>
+            <div class="btn" onclick="layout(1)">Toast</div>
+            <div class="contant">
+                <div class="container">
+                    <p onclick="clickToast()">文字Toast</p>
+                    <p onclick="clickSuccessToast()">成功Toast</p>
+                    <p onclick="clickFailToast()">失败Toast</p>
+                </div>
+            </div>
+        </li>
+        <li>
+            <div class="btn" onclick="layout(2)">Loading</div>
+            <div class="contant">
+                <div class="container">
+                    <p onclick="clickShowLoading()">显示Loading</p>
+                    <p onclick="clickHiddenLoading()">隐藏Loading</p>
+                </div>
+            </div>
+        </li>
+        <li>
+            <div class="btn" onclick="layout(3)">Modal</div>
+            <div class="contant">
+                <div class="container">
+                    <p onclick="clickshowModalHaveCancel()">有title有取消按钮的modal</p>
+                    <p onclick="clickshowModalNoHaveTitleCancel()">没有title的modal</p>
+                    <p onclick="clickshowModalNoHaveCancel()">没有取消按钮的modal</p>
+                </div>
+            </div>
+        </li>
+        <li>
+            <div class="btn" onclick="layout(4)">ActionSheet</div>
+            <div class="contant">
+                <div class="container">
+                    <p onclick="clickActionSheet()">ActionSheet</p>
+                </div>
+            </div>
+        </li>
+    </ul>
+
+    <script>
+        /*
+            request
+        */
+        async function clickGetData() {
+            var params = {
+                url: 'http://127.0.0.1:8000/data1.json',
+                method: 'POST'
+            }
+            const data = await window.xengine.network.request(params);
+            alert(JSON.stringify(data));
+            console.log(data);
+        }
+
+        /*
+            Loading
+        */
+        function clickShowLoading() {
+            const w = window;
+            window.xengine.ui.showLoading();
+            setTimeout(() => {
+                w.xengine.ui.hiddenToast();
+            }, 2000);
+        }
+
+        function clickHiddenLoading() {
+            window.xengine.ui.hiddenLoading();
+        }
+
+        /*
+            Toast
+        */
+        function clickToast() {
+            const w = window;
+            w.xengine.ui.showToast({ title: 'toast', });
+            setTimeout(() => {
+                w.xengine.ui.hiddenToast();
+            }, 2000);
+        }
+
+        function clickSuccessToast() {
+            const w = window;
+            w.xengine.ui.showSuccessToast({ title: "成功" });
+            setTimeout(() => {
+                w.xengine.ui.hiddenToast();
+            }, 2000);
+        }
+
+        function clickFailToast() {
+            const w = window;
+            w.xengine.ui.showFailToast({ title: "失败" });
+            setTimeout(() => {
+                w.xengine.ui.hiddenToast();
+            }, 2000);
+        }
+
+        /*
+            Modal
+        */
+        function clickshowModalHaveCancel() {
+            const w = window;
+            w.xengine.ui.showModal({ title: "title", content: "content", showCancel: 'true' })
+        }
+
+        function clickshowModalNoHaveTitleCancel() {
+            const w = window;
+            w.xengine.ui.showModal({ content: "content", showCancel: 'true' })
+        }
+
+        function clickshowModalNoHaveCancel() {
+            const w = window;
+            w.xengine.ui.showModal({ title: "title", content: "content", showCancel: 'false' })
+        }
+ 
+        // clickActionSheet
+        function clickActionSheet() {
+            window.xengine.ui.showActionSheet({
+                title: 'actionSheet',
+                content: 'content',
+                itemList : ['测试1','测试2','测试3','测试4','测试5']
+            });
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        // 布局
+        function layout(index) {
+            if (document.getElementsByClassName('contant')[index].classList.contains('active')) {
+                document.getElementsByClassName("contant")[index].style.borderTop = "0px solid #ccc";
+                document.getElementsByClassName("contant")[index].classList.remove("active");
+                document.getElementsByClassName("contant")[index].style.height = 0 + "px";
+            } else {
+                document.getElementsByClassName("contant")[index].style.borderTop = "1px solid #ccc";
+                document.getElementsByClassName("contant")[index].classList.add("active");
+                document.getElementsByClassName("contant")[index].style.height = document.getElementsByClassName("container")[index].offsetHeight + "px";
+            }
+        }
+    </script>
+</body>
+
+</html>
