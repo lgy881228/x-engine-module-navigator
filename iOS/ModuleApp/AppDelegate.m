@@ -8,7 +8,7 @@
 
 #import "AppDelegate.h"
 #import "EntryViewController.h"
-#import <XEngineSDK/XEngineSDK.h>
+#import <XEngine.h>
 @interface AppDelegate ()
 
 @end
@@ -24,7 +24,7 @@
        
        
        self.window.rootViewController = nav;
-    [[XEngineSDK sharedInstance] registerApp:@"" andAppSecret:@"" serverUrl:@""];
+    [[XEngineSDK sharedInstance] registerWithApplication:application didFinishLaunchingWithOptions:launchOptions];
     
     return YES;
 }

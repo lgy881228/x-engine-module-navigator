@@ -21,22 +21,22 @@ PODS:
   - Masonry (1.1.0)
   - MBProgressHUD (1.2.0)
   - SSZipArchive (2.2.3)
-  - UIModule (1.0.1):
-    - LSRFramework (~> 1.1.1)
-    - XEngineSDK
-  - XEngineSDK (1.0.0):
+  - XEngineSDK (1.0.1):
     - AFNetworking
     - JSONModel
     - LSRFramework (~> 1.1.1)
     - SSZipArchive
+  - XEngineUIModule (1.0.0):
+    - LSRFramework
+    - XEngineSDK
 
 DEPENDENCIES:
   - AFNetworking
   - JSONModel
   - LSRFramework
   - SSZipArchive
-  - UIModule
-  - XEngineSDK
+  - XEngineSDK (from `../iOS`)
+  - XEngineUIModule (from `../iOS`)
 
 SPEC REPOS:
   trunk:
@@ -46,8 +46,12 @@ SPEC REPOS:
     - Masonry
     - MBProgressHUD
     - SSZipArchive
-    - UIModule
-    - XEngineSDK
+
+EXTERNAL SOURCES:
+  XEngineSDK:
+    :path: "../iOS"
+  XEngineUIModule:
+    :path: "../iOS"
 
 SPEC CHECKSUMS:
   AFNetworking: 7864c38297c79aaca1500c33288e429c3451fdce
@@ -56,9 +60,9 @@ SPEC CHECKSUMS:
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   MBProgressHUD: 3ee5efcc380f6a79a7cc9b363dd669c5e1ae7406
   SSZipArchive: 62d4947b08730e4cda640473b0066d209ff033c9
-  UIModule: b6715a2345bb73489c1f97c216e32c7400f6c8e3
-  XEngineSDK: e8ad85482547c621596922396a91a1a625fc11a5
+  XEngineSDK: 37eb6aa2ea859df0de18ab1b210d7410f80323f1
+  XEngineUIModule: 8dfcb41ed83c1f8bf25b2d055135de1577f5bea6
 
-PODFILE CHECKSUM: 0104dd108cb0cd3f756f04f6ab3de0c3e45f784e
+PODFILE CHECKSUM: 504f6cd5dd4e6803522b9a56f4e776790ed13a41
 
 COCOAPODS: 1.9.3

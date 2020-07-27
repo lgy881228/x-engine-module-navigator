@@ -8,10 +8,16 @@ target 'ModuleApp' do
   pod 'JSONModel'
   pod 'SSZipArchive'
   pod 'AFNetworking'
-  pod 'XEngineSDK'
-  pod 'UIModule'
+  #pod 'XEngineSDK'
+  #pod 'UIModule'
+	
+# Pods for XEngineUIModule
+  pod 'XEngineUIModule', :path =>'../iOS'	
+ 
+# Pods for XEngineSDK
+  pod 'XEngineSDK', :path =>'../iOS'
 
-  target 'ModuleAppTests' do
+ target 'ModuleAppTests' do
     inherit! :search_paths
     # Pods for testing
   end

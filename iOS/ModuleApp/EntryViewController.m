@@ -7,7 +7,7 @@
 //
 
 #import "EntryViewController.h"
-#import <XEngineSDK/XEngineSDK.h>
+#import <XEngine.h>
 @interface EntryViewController ()
 
 @end
