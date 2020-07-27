@@ -3,7 +3,7 @@
   "serve_files": [
       "tmp/compiled.js"
   ],
-
+  "framework": "jasmine",
   "src_files": [
     "test/**/*.js"
   ]

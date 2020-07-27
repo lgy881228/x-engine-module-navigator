@@ -4,17 +4,19 @@ const merge = require('webpack-merge');
 
 const common = require("./webpack.config.js");
 
-module.exports = merge(common, {
+module.exports = (common, {
   // when debug in browser,  it will show the source
   devtool: "inline-source-map",
   mode: "development",
-  //entry: glob.sync("./test/*_spec{,s}.js").map(function (file) {
-  entry: glob.sync("./test/*.js").map(function (file) {
+  entry: glob.sync("./perf/*.js").map(function (file) {
     return path.resolve(__dirname, file);
   }),
   output: {
     // save the resulting bundle in the ./tmp/ directory
-    path: path.resolve("./tmp/test/"),
+    path: path.resolve("./tmp/perf/"),
     filename: "main.js",
-  }
+  },
+    plugins: [
+    ]
 });
+console.log(module.exports)
