@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		0036518524CEE7980057D976 /* com.zkty.module.uidemo.0 in Resources */ = {isa = PBXBuildFile; fileRef = 0036518424CEE7980057D976 /* com.zkty.module.uidemo.0 */; };
+		0036518D24CEF0A60057D976 /* XEngineNavModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0036518B24CEF0A60057D976 /* XEngineNavModel.m */; };
+		0036518E24CEF0A60057D976 /* __xengine__module_NavigationModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 0036518C24CEF0A60057D976 /* __xengine__module_NavigationModule.m */; };
 		00DFC6CA24C83F95006A53EE /* iOSTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00DFC6C924C83F95006A53EE /* iOSTests.m */; };
 		00DFC6D524C83F95006A53EE /* iOSUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00DFC6D424C83F95006A53EE /* iOSUITests.m */; };
 		00DFC6F024C84000006A53EE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 00DFC6E424C84000006A53EE /* Assets.xcassets */; };
@@ -43,6 +45,10 @@
 
 /* Begin PBXFileReference section */
 		0036518424CEE7980057D976 /* com.zkty.module.uidemo.0 */ = {isa = PBXFileReference; lastKnownFileType = folder; path = com.zkty.module.uidemo.0; sourceTree = "<group>"; };
+		0036518924CEF0A60057D976 /* __xengine__module_NavigationModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = __xengine__module_NavigationModule.h; sourceTree = "<group>"; };
+		0036518A24CEF0A60057D976 /* XEngineNavModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XEngineNavModel.h; sourceTree = "<group>"; };
+		0036518B24CEF0A60057D976 /* XEngineNavModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XEngineNavModel.m; sourceTree = "<group>"; };
+		0036518C24CEF0A60057D976 /* __xengine__module_NavigationModule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = __xengine__module_NavigationModule.m; sourceTree = "<group>"; };
 		00DFC6AA24C83F94006A53EE /* ModuleApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ModuleApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		00DFC6C524C83F95006A53EE /* ModuleAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ModuleAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		00DFC6C924C83F95006A53EE /* iOSTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iOSTests.m; sourceTree = "<group>"; };
@@ -102,6 +108,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0036518824CEF0A60057D976 /* XEngineNavigationModule */ = {
+			isa = PBXGroup;
+			children = (
+				0036518924CEF0A60057D976 /* __xengine__module_NavigationModule.h */,
+				0036518A24CEF0A60057D976 /* XEngineNavModel.h */,
+				0036518B24CEF0A60057D976 /* XEngineNavModel.m */,
+				0036518C24CEF0A60057D976 /* __xengine__module_NavigationModule.m */,
+			);
+			path = XEngineNavigationModule;
+			sourceTree = "<group>";
+		};
 		00DFC6A124C83F94006A53EE = {
 			isa = PBXGroup;
 			children = (
@@ -145,6 +162,7 @@
 		00DFC6E224C84000006A53EE /* ModuleApp */ = {
 			isa = PBXGroup;
 			children = (
+				0036518824CEF0A60057D976 /* XEngineNavigationModule */,
 				0036518424CEE7980057D976 /* com.zkty.module.uidemo.0 */,
 				00DFC6FF24C843A3006A53EE /* xengine_config.json */,
 				00DFC6E324C84000006A53EE /* AppDelegate.h */,
@@ -428,6 +446,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				00DFC6F624C84000006A53EE /* AppDelegate.m in Sources */,
+				0036518D24CEF0A60057D976 /* XEngineNavModel.m in Sources */,
+				0036518E24CEF0A60057D976 /* __xengine__module_NavigationModule.m in Sources */,
 				00DFC6FB24C841FD006A53EE /* EntryViewController.m in Sources */,
 				00DFC6F124C84000006A53EE /* ViewController.m in Sources */,
 				00DFC6F524C84000006A53EE /* main.m in Sources */,
