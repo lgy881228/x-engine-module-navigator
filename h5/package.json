@@ -1,6 +1,6 @@
 {
   "name": "@zk4/moudle_demo",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "main": "index.js",
   "license": "MIT",
   "scripts": {
@@ -8,8 +8,9 @@
     "build": "webpack  --config webpack.prod.js",
     "patch": "npm version patch",
     "test": "rm -rdf tmp &&  testem",
-    "ci": "testem ci",
-    "perf": "rm -rdf tmp && webpack --config webpack.perf.js && node tmp/perf/main.js"
+    "ci": "rm -rdf tmp &&testem ci",
+    "perf": "rm -rdf tmp && webpack --config webpack.perf.js && node tmp/perf/main.js",
+    "build:device": "webpack  --config webpack.prod.js && cp dist/* ../iOS/ModuleApp/com.zkty.xiaoqu.network.0/"
   },
   "repository": {
     "type": "git",
