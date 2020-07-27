@@ -1,27 +1,36 @@
 {
-  "name": "webpack_demo",
-  "version": "1.0.0",
+  "name": "@zk4/moudle_demo",
+  "version": "1.0.1",
   "main": "index.js",
   "license": "MIT",
-  "dependencies": {
-  },
   "scripts": {
     "dev": "webpack-dev-server --mode development --open --hot",
-    "build": "webpack --mode production",
-    "build:with-prod-config": "webpack  --config webpack.prod.js"
+    "build": "webpack  --config webpack.prod.js",
+    "patch": "npm version patch",
+    "test": "rm -rdf tmp &&  testem",
+    "ci": "rm -rdf tmp &&testem ci",
+    "perf": "rm -rdf tmp && webpack --config webpack.perf.js && node tmp/perf/main.js",
+    "build:device": "webpack  --config webpack.prod.js && cp dist/* ../iOS/ModuleApp/com.zkty.xiaoqu.network.0/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "ssh://git@github.com/zk4/x-engine-npm.git"
   },
   "devDependencies": {
     "@babel/core": "^7.10.4",
     "@babel/preset-env": "^7.10.4",
     "babel-loader": "^8.1.0",
+    "benchmark": "^2.1.4",
     "css-loader": "^3.6.0",
+    "file-loader": "^1.1.11",
     "html-webpack-plugin": "^4.3.0",
+    "mocha": "^8.0.1",
     "style-loader": "^1.2.1",
-		"file-loader": "^1.1.11",
     "webpack": "^4.43.0",
     "webpack-cli": "^3.3.12",
-		"webpack-merge": "^4.1.4",
-    "webpack-dev-server": "^3.11.0",
-    "x-engine-bridge": "^1.0.0"
+    "webpack-dev-server": "^3.11.0"
+  },
+  "dependencies": {
+    "@zk4/xengine": "^1.0.9"
   }
 }
