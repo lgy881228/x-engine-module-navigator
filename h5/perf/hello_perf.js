@@ -1,17 +1,10 @@
 import hello from '../src/hello.js'
 import Benchmark from 'benchmark'
-
 var suite = new Benchmark.Suite;
 
 // add tests
-suite.add('RegExp#test', function() {
-  /o/.test('Hello World!');
-})
-.add('String#indexOf', function() {
-  'Hello World!'.indexOf('o') > -1;
-})
-.add('String#match', function() {
-  !!'Hello World!'.match(/o/);
+suite.add('hello', function() {
+  hello();
 })
 // add listeners
 .on('cycle', function(event) {
