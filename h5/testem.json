@@ -1,7 +1,7 @@
 {
   "before_tests": "webpack --config webpack.test.js ",
   "serve_files": [
-      "tmp/compiled.js"
+      "tmp/test/main.js"
   ],
   "framework": "jasmine",
   "src_files": [

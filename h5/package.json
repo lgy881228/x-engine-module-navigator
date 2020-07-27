@@ -7,9 +7,9 @@
     "dev": "webpack-dev-server --mode development --open --hot",
     "build": "webpack  --config webpack.prod.js",
     "patch": "npm version patch",
-    "test": "testem test",
+    "test": "rm -rdf tmp &&  testem",
     "ci": "testem ci",
-    "perf": "webpack --config webpack.perf.js && node tmp/perf/main.js"
+    "perf": "rm -rdf tmp && webpack --config webpack.perf.js && node tmp/perf/main.js"
   },
   "repository": {
     "type": "git",
